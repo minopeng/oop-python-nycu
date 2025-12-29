@@ -20,7 +20,7 @@ def bisect_search1(L, e):
 
 def bisect_search2(L, e):
     def bisect_search_helper(L, e, low, high):
-        print('low: ' + str(low) + '; high: ' + str(high))  #added to visualize
+        print('low: ' + str(low) + '; high: ' + str(high))  
         if high == low:
             return L[low] == e
         mid = (low + high)//2
