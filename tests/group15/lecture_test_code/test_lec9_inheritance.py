@@ -5,7 +5,6 @@ from lec9_inheritance import Animal, Cat, Person, Student, Rabbit
 
 # ===== 測試 Animal (父類別) ===
 def test_animal_base():
-    """測試 Animal 基礎功能的設定與取得"""
     animal = Animal(10)
     assert animal.get_age() == 10
     assert animal.get_name() is None
@@ -13,14 +12,13 @@ def test_animal_base():
     animal.set_name("buddy")
     assert animal.get_name() == "buddy"
     
-    animal.set_name() # 測試預設參數
+    animal.set_name() 
     assert animal.get_name() == ""
     
     assert str(animal) == "animal::10"
 
 # ===== 測試 Cat (繼承 Animal) =====
 def test_cat_inheritance_and_methods():
-    """測試 Cat 是否繼承了 Animal 的屬性，以及自己的方法"""
     cat = Cat(5)
     cat.set_name("whiskers")
     
@@ -28,11 +26,8 @@ def test_cat_inheritance_and_methods():
     assert cat.get_age() == 5
     assert cat.get_name() == "whiskers"
     
-    # 測試 Cat 覆寫 (override) 的 __str__ 方法
     assert str(cat) == "cat:whiskers:5"
     
-    # 測試 Cat 自己的 speak 方法
-    # 需要捕捉 print 的輸出才能進行斷言
     captured_output = io.StringIO()
     sys.stdout = captured_output
     cat.speak()
