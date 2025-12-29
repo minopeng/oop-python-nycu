@@ -6,7 +6,6 @@ from lec8 import Coordinate, Fraction, intSet
 # ===== 測試 Coordinate Class =====
 # ==================================
 def test_coordinate_creation_and_str():
-    """測試 Coordinate 物件的初始化和字串表示"""
     c = Coordinate(3, 4)
     assert c.x == 3
     assert c.y == 4
